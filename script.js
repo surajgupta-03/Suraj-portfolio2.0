@@ -9,10 +9,6 @@ const navLinks =
     document.querySelector(".nav-links");
 
 
-/*
-    Open and close mobile navigation
-*/
-
 if (menuBtn && navLinks) {
 
 
@@ -27,11 +23,6 @@ if (menuBtn && navLinks) {
         }
     );
 
-
-    /*
-        Close menu after
-        clicking any navigation link
-    */
 
     const navItems =
         navLinks.querySelectorAll("a");
@@ -101,8 +92,6 @@ function typeEffect() {
         words[wordIndex];
 
 
-    /* ================= TYPING ================= */
-
     if (!deleting) {
 
 
@@ -115,10 +104,6 @@ function typeEffect() {
 
         charIndex++;
 
-
-        /*
-            When complete word is typed
-        */
 
         if (
             charIndex ===
@@ -139,11 +124,8 @@ function typeEffect() {
 
         }
 
-
     }
 
-
-    /* ================= DELETING ================= */
 
     else {
 
@@ -157,10 +139,6 @@ function typeEffect() {
 
         charIndex--;
 
-
-        /*
-            When word is completely deleted
-        */
 
         if (charIndex === 0) {
 
@@ -209,8 +187,8 @@ document.addEventListener(
 
 
         /*
-            Don't apply mouse
-            3D effect on phones
+            Disable mouse 3D
+            on phone
         */
 
         if (
@@ -316,7 +294,6 @@ function scrollAnimation() {
                     "rotateX(0deg) " +
                     "translateY(0)";
 
-
             }
 
 
@@ -383,7 +360,6 @@ window.addEventListener(
 
         if (glow1) {
 
-
             glow1.style.transform =
 
                 `translateY(
@@ -395,7 +371,6 @@ window.addEventListener(
 
         if (glow2) {
 
-
             glow2.style.transform =
 
                 `translateY(
@@ -406,7 +381,6 @@ window.addEventListener(
 
 
         if (glow3) {
-
 
             glow3.style.transform =
 
