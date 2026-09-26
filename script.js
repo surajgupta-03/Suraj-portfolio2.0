@@ -126,7 +126,6 @@ function typeEffect() {
 
     }
 
-
     else {
 
 
@@ -172,7 +171,7 @@ typeEffect();
 
 
 /* ================================================= */
-/* ============== 3D PROFILE EFFECT ================ */
+/* ================ 3D MOUSE EFFECT =============== */
 /* ================================================= */
 
 const profileCard =
@@ -187,22 +186,13 @@ document.addEventListener(
 
 
         /*
-            Disable mouse 3D
-            on phone
+            Keep mobile animation
+            independent from mouse
         */
 
         if (
             window.innerWidth <= 600
         ) {
-
-
-            if (profileCard) {
-
-                profileCard.style.transform =
-                    "rotateY(0deg) rotateX(0deg)";
-
-            }
-
 
             return;
 
@@ -221,7 +211,7 @@ document.addEventListener(
             (
                 window.innerWidth / 2 -
                 event.clientX
-            ) / 25;
+            ) / 35;
 
 
         const y =
@@ -229,20 +219,32 @@ document.addEventListener(
             (
                 window.innerHeight / 2 -
                 event.clientY
-            ) / 25;
+            ) / 35;
 
 
-        profileCard.style.transform =
+        /*
+           Only apply a small
+           3D tilt to the complete
+           profile system.
+        */
 
-            `rotateY(${x}deg)
-             rotateX(${y}deg)`;
+        profileCard.style.setProperty(
+            "--mouseX",
+            `${x}deg`
+        );
+
+
+        profileCard.style.setProperty(
+            "--mouseY",
+            `${y}deg`
+        );
 
     }
 );
 
 
 /* ================================================= */
-/* ================ SCROLL 3D EFFECT ============== */
+/* ================= SCROLL EFFECT ================= */
 /* ================================================= */
 
 const cards =
@@ -289,13 +291,11 @@ function scrollAnimation() {
 
 
                 card.style.transform =
-
                     "perspective(1000px) " +
                     "rotateX(0deg) " +
                     "translateY(0)";
 
             }
-
 
             else {
 
@@ -305,7 +305,6 @@ function scrollAnimation() {
 
 
                 card.style.transform =
-
                     "perspective(1000px) " +
                     "rotateX(20deg) " +
                     "translateY(60px)";
@@ -328,7 +327,7 @@ scrollAnimation();
 
 
 /* ================================================= */
-/* ============== PARALLAX BACKGROUND ============== */
+/* ================= PARALLAX ====================== */
 /* ================================================= */
 
 window.addEventListener(
@@ -361,7 +360,6 @@ window.addEventListener(
         if (glow1) {
 
             glow1.style.transform =
-
                 `translateY(
                     ${scroll * 0.15}px
                 )`;
@@ -372,7 +370,6 @@ window.addEventListener(
         if (glow2) {
 
             glow2.style.transform =
-
                 `translateY(
                     ${scroll * -0.10}px
                 )`;
@@ -383,10 +380,32 @@ window.addEventListener(
         if (glow3) {
 
             glow3.style.transform =
-
                 `translateY(
                     ${scroll * 0.08}px
                 )`;
+
+        }
+
+    }
+);
+
+
+/* ================================================= */
+/* ============= RESIZE SAFETY ===================== */
+/* ================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (
+            window.innerWidth <= 600 &&
+            profileCard
+        ) {
+
+            profileCard.style.removeProperty(
+                "transform"
+            );
 
         }
 
