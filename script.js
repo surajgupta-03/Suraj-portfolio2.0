@@ -1,5 +1,5 @@
 /* ================================================= */
-/* ================= MOBILE MENU =================== */
+/* ================ MOBILE MENU ==================== */
 /* ================================================= */
 
 const menuBtn =
@@ -20,6 +20,39 @@ if (menuBtn && navLinks) {
                 "active"
             );
 
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            if (
+                navLinks.classList.contains(
+                    "active"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-bars"
+                );
+
+                icon.classList.add(
+                    "fa-xmark"
+                );
+
+            }
+
+            else {
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
         }
     );
 
@@ -39,6 +72,19 @@ if (menuBtn && navLinks) {
                         "active"
                     );
 
+
+                    const icon =
+                        menuBtn.querySelector("i");
+
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
                 }
             );
 
@@ -48,17 +94,18 @@ if (menuBtn && navLinks) {
 }
 
 
+
 /* ================================================= */
-/* ================= TYPING EFFECT ================= */
+/* ================ TYPING EFFECT ================== */
 /* ================================================= */
 
 const words = [
 
     "Computer Science Student",
 
-    "Data Science Enthusiast",
-
     "Web Developer",
+
+    "Data Science Enthusiast",
 
     "Programmer",
 
@@ -146,8 +193,11 @@ function typeEffect() {
 
 
             wordIndex =
-                (wordIndex + 1)
-                % words.length;
+                (
+                    wordIndex + 1
+                )
+                %
+                words.length;
 
         }
 
@@ -170,8 +220,9 @@ function typeEffect() {
 typeEffect();
 
 
+
 /* ================================================= */
-/* ================ 3D MOUSE EFFECT =============== */
+/* =============== PROFILE 3D EFFECT ============== */
 /* ================================================= */
 
 const profileCard =
@@ -180,14 +231,26 @@ const profileCard =
     );
 
 
+let mouseX = 0;
+
+let mouseY = 0;
+
+
 document.addEventListener(
     "mousemove",
     (event) => {
 
 
+        if (!profileCard) {
+
+            return;
+
+        }
+
+
         /*
-            Keep mobile animation
-            independent from mouse
+            Disable 3D mouse effect
+            on mobile devices.
         */
 
         if (
@@ -199,6 +262,41 @@ document.addEventListener(
         }
 
 
+        mouseX =
+
+            (
+                window.innerWidth / 2 -
+                event.clientX
+            ) / 45;
+
+
+        mouseY =
+
+            (
+                window.innerHeight / 2 -
+                event.clientY
+            ) / 45;
+
+
+        profileCard.style.transform =
+
+            `rotateY(${mouseX}deg)
+             rotateX(${mouseY}deg)`;
+
+    }
+);
+
+
+
+/* ================================================= */
+/* =============== PROFILE RESET =================== */
+/* ================================================= */
+
+document.addEventListener(
+    "mouseleave",
+    () => {
+
+
         if (!profileCard) {
 
             return;
@@ -206,55 +304,42 @@ document.addEventListener(
         }
 
 
-        const x =
-
-            (
-                window.innerWidth / 2 -
-                event.clientX
-            ) / 35;
+        if (
+            window.innerWidth > 600
+        ) {
 
 
-        const y =
+            profileCard.style.transform =
+                "rotateY(0deg) rotateX(0deg)";
 
-            (
-                window.innerHeight / 2 -
-                event.clientY
-            ) / 35;
-
-
-        /*
-           Only apply a small
-           3D tilt to the complete
-           profile system.
-        */
-
-        profileCard.style.setProperty(
-            "--mouseX",
-            `${x}deg`
-        );
-
-
-        profileCard.style.setProperty(
-            "--mouseY",
-            `${y}deg`
-        );
+        }
 
     }
 );
+
 
 
 /* ================================================= */
 /* ================= SCROLL EFFECT ================= */
 /* ================================================= */
 
-const cards =
+const animatedCards =
 
     document.querySelectorAll(
 
         ".skill-card, " +
+
         ".project-card, " +
+
         ".achievement-card, " +
-        ".about-card"
+
+        ".about-card, " +
+
+        ".stat-card, " +
+
+        ".resume-card, " +
+
+        ".contact-card"
 
     );
 
@@ -266,7 +351,7 @@ function scrollAnimation() {
         window.innerHeight;
 
 
-    cards.forEach(
+    animatedCards.forEach(
         (card) => {
 
 
@@ -280,7 +365,7 @@ function scrollAnimation() {
             const visible =
 
                 position <
-                windowHeight - 100;
+                windowHeight - 80;
 
 
             if (visible) {
@@ -291,8 +376,11 @@ function scrollAnimation() {
 
 
                 card.style.transform =
+
                     "perspective(1000px) " +
+
                     "rotateX(0deg) " +
+
                     "translateY(0)";
 
             }
@@ -305,9 +393,12 @@ function scrollAnimation() {
 
 
                 card.style.transform =
+
                     "perspective(1000px) " +
-                    "rotateX(20deg) " +
-                    "translateY(60px)";
+
+                    "rotateX(12deg) " +
+
+                    "translateY(45px)";
 
             }
 
@@ -323,12 +414,37 @@ window.addEventListener(
 );
 
 
+window.addEventListener(
+    "load",
+    scrollAnimation
+);
+
+
 scrollAnimation();
+
 
 
 /* ================================================= */
 /* ================= PARALLAX ====================== */
 /* ================================================= */
+
+const glow1 =
+    document.querySelector(
+        ".glow1"
+    );
+
+
+const glow2 =
+    document.querySelector(
+        ".glow2"
+    );
+
+
+const glow3 =
+    document.querySelector(
+        ".glow3"
+    );
+
 
 window.addEventListener(
     "scroll",
@@ -337,24 +453,6 @@ window.addEventListener(
 
         const scroll =
             window.scrollY;
-
-
-        const glow1 =
-            document.querySelector(
-                ".glow1"
-            );
-
-
-        const glow2 =
-            document.querySelector(
-                ".glow2"
-            );
-
-
-        const glow3 =
-            document.querySelector(
-                ".glow3"
-            );
 
 
         if (glow1) {
@@ -390,24 +488,217 @@ window.addEventListener(
 );
 
 
+
 /* ================================================= */
-/* ============= RESIZE SAFETY ===================== */
+/* ================= NAVBAR SCROLL ================= */
+/* ================================================= */
+
+const header =
+    document.querySelector(
+        ".header"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+
+        if (!header) {
+
+            return;
+
+        }
+
+
+        if (
+            window.scrollY > 50
+        ) {
+
+            header.style.background =
+                "rgba(2, 7, 19, 0.94)";
+
+        }
+
+        else {
+
+            header.style.background =
+                "rgba(2, 7, 19, 0.80)";
+
+        }
+
+    }
+);
+
+
+
+/* ================================================= */
+/* ================= ACTIVE NAV ===================== */
+/* ================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+
+        let currentSection =
+            "";
+
+
+        sections.forEach(
+            (section) => {
+
+
+                const sectionTop =
+                    section.offsetTop - 150;
+
+
+                const sectionHeight =
+                    section.offsetHeight;
+
+
+                if (
+                    window.scrollY >=
+                    sectionTop
+                    &&
+                    window.scrollY <
+                    sectionTop +
+                    sectionHeight
+                ) {
+
+                    currentSection =
+                        section.getAttribute(
+                            "id"
+                        );
+
+                }
+
+            }
+        );
+
+
+        navigationLinks.forEach(
+            (link) => {
+
+
+                link.classList.remove(
+                    "active-link"
+                );
+
+
+                if (
+                    link.getAttribute(
+                        "href"
+                    )
+                    ===
+                    `#${currentSection}`
+                ) {
+
+                    link.classList.add(
+                        "active-link"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* ================================================= */
+/* =============== RESIZE SAFETY =================== */
 /* ================================================= */
 
 window.addEventListener(
     "resize",
     () => {
 
+
+        if (!profileCard) {
+
+            return;
+
+        }
+
+
         if (
-            window.innerWidth <= 600 &&
-            profileCard
+            window.innerWidth <= 600
         ) {
 
-            profileCard.style.removeProperty(
-                "transform"
+
+            profileCard.style.transform =
+                "scale(0.76)";
+
+        }
+
+        else {
+
+
+            profileCard.style.transform =
+                "rotateY(0deg) rotateX(0deg)";
+
+        }
+
+    }
+);
+
+
+
+/* ================================================= */
+/* ================= IMAGE SAFETY ================== */
+/* ================================================= */
+
+const profileImage =
+    document.querySelector(
+        ".profile-image img"
+    );
+
+
+if (profileImage) {
+
+
+    profileImage.addEventListener(
+        "error",
+        () => {
+
+
+            console.log(
+                "Profile image could not be loaded. Make sure suraj.jpeg is in the same folder as index.html."
             );
 
         }
+    );
+
+}
+
+
+
+/* ================================================= */
+/* ================ PAGE LOADED ==================== */
+/* ================================================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        document.body.classList.add(
+            "page-loaded"
+        );
 
     }
 );
