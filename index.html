@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- ================================================= -->
+    <!-- BASIC META INFORMATION -->
+    <!-- ================================================= -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -10,7 +14,60 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Suraj Kumar Gupta | Portfolio</title>
+    <meta
+        name="description"
+        content="Suraj Kumar Gupta - B.Tech CSE Data Science Student Portfolio"
+    >
+
+    <meta
+        name="author"
+        content="Suraj Kumar Gupta"
+    >
+
+
+    <!-- ================================================= -->
+    <!-- PAGE TITLE -->
+    <!-- ================================================= -->
+
+    <title>
+        Suraj Kumar Gupta | Portfolio
+    </title>
+
+
+    <!-- ================================================= -->
+    <!-- GOOGLE FONTS -->
+    <!-- ================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================================================= -->
+    <!-- FONT AWESOME -->
+    <!-- ================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ================================================= -->
+    <!-- CSS -->
+    <!-- ================================================= -->
 
     <link
         rel="stylesheet"
@@ -29,6 +86,8 @@
 
     <div class="background">
 
+        <div class="grid-background"></div>
+
         <div class="glow glow1"></div>
 
         <div class="glow glow2"></div>
@@ -40,76 +99,119 @@
 
 
     <!-- ================================================= -->
-    <!-- NAVBAR -->
+    <!-- NAVIGATION BAR -->
     <!-- ================================================= -->
 
-    <header>
+    <header class="header">
 
         <nav class="navbar">
 
 
-            <div class="logo">
+            <!-- LOGO -->
+
+            <a
+                href="#home"
+                class="logo"
+            >
 
                 <span>S</span>uraj
 
-            </div>
+            </a>
 
+
+
+            <!-- NAVIGATION LINKS -->
 
             <ul class="nav-links">
 
+
                 <li>
+
                     <a href="#home">
                         Home
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#about">
                         About
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#skills">
                         Skills
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#projects">
                         Projects
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#achievements">
                         Achievements
                     </a>
+
                 </li>
 
+
                 <li>
+
+                    <a href="#resume">
+                        Resume
+                    </a>
+
+                </li>
+
+
+                <li>
+
                     <a href="#gallery">
                         Gallery
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#contact">
                         Contact
                     </a>
+
                 </li>
 
             </ul>
 
 
-            <div
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
                 class="menu-btn"
                 id="menuBtn"
+                aria-label="Open Menu"
             >
 
-                ☰
+                <i class="fa-solid fa-bars"></i>
 
-            </div>
+            </button>
+
 
         </nav>
 
@@ -118,750 +220,1574 @@
 
 
     <!-- ================================================= -->
-    <!-- HOME -->
+    <!-- HOME / HERO SECTION -->
     <!-- ================================================= -->
 
-    <section
-        id="home"
-        class="hero"
-    >
+    <main>
+
+        <section
+            id="home"
+            class="hero"
+        >
 
 
-        <!-- ================================================= -->
-        <!-- PROFILE -->
-        <!-- ================================================= -->
+            <!-- ================================================= -->
+            <!-- PROFILE AREA -->
+            <!-- ================================================= -->
 
-        <div class="profile-container">
+            <div class="profile-container">
+
+                <div class="profile-card">
 
 
-            <div class="profile-card">
+                    <!-- BACKGROUND GLOW -->
+
+                    <div class="profile-glow"></div>
 
 
-                <!-- 3D ORBIT RINGS -->
+                    <!-- OUTER DECORATIVE RING -->
 
-                <div class="orbit orbit-1">
-                    <span class="particle p1"></span>
-                    <span class="particle p2"></span>
+                    <div class="profile-ring"></div>
+
+
+                    <!-- PROFILE PHOTO -->
+
+                    <div class="profile-image">
+
+                        <img
+                            src="suraj.jpeg"
+                            alt="Suraj Kumar Gupta"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- HERO CONTENT -->
+            <!-- ================================================= -->
+
+            <div class="hero-content">
+
+
+                <!-- SMALL INTRO -->
+
+                <div class="hero-label">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        WELCOME TO MY PORTFOLIO
+                    </span>
+
                 </div>
 
 
-                <div class="orbit orbit-2">
-                    <span class="particle p3"></span>
-                    <span class="particle p4"></span>
-                </div>
+
+                <!-- MAIN HEADING -->
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span class="gradient-text">
+                        Suraj Kumar Gupta
+                    </span>
+
+                </h1>
 
 
-                <div class="orbit orbit-3">
-                    <span class="particle p5"></span>
-                    <span class="particle p6"></span>
-                </div>
+
+                <!-- TYPING TITLE -->
+
+                <h2 class="hero-role">
+
+                    B.Tech CSE |
+
+                    <span id="typing"></span>
+
+                    <span class="typing-cursor">
+                        |
+                    </span>
+
+                </h2>
 
 
-                <div class="orbit orbit-4">
-                    <span class="particle p7"></span>
-                    <span class="particle p8"></span>
-                </div>
+
+                <!-- DESCRIPTION -->
+
+                <p class="hero-description">
+
+                    I am a Computer Science Engineering
+                    student specializing in Data Science.
+                    I enjoy solving programming problems,
+                    developing websites, analyzing data
+                    and learning new technologies.
+
+                </p>
 
 
-                <div class="orbit orbit-5">
-                    <span class="particle p9"></span>
-                </div>
+
+                <!-- ================================================= -->
+                <!-- SOCIAL LINKS -->
+                <!-- ================================================= -->
+
+                <div class="social-links">
 
 
-                <!-- PROFILE IMAGE -->
+                    <!-- LINKEDIN -->
 
-                <div class="profile-image">
-
-                    <img
-                        src="suraj.jpeg"
-                        alt="Suraj Kumar Gupta"
+                    <a
+                        href="https://www.linkedin.com/in/surajkumargupta03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                        title="LinkedIn"
+                        aria-label="LinkedIn"
                     >
 
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+
+                    <!-- GITHUB -->
+
+                    <a
+                        href="https://github.com/surajgupta-03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                        title="GitHub"
+                        aria-label="GitHub"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+
+
+                    <!-- LEETCODE -->
+
+                    <a
+                        href="https://leetcode.com/u/suraj715/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                        title="LeetCode"
+                        aria-label="LeetCode"
+                    >
+
+                        <span class="leetcode-logo">
+                            LC
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:mr.surajgupta03@gmail.com"
+                        class="social"
+                        title="Email"
+                        aria-label="Email"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- HERO BUTTONS -->
+                <!-- ================================================= -->
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        href="#projects"
+                        class="btn primary-btn"
+                    >
+
+                        <span>
+                            View Projects
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="#contact"
+                        class="btn secondary-btn"
+                    >
+
+                        <span>
+                            Contact Me
+                        </span>
+
+                        <i class="fa-regular fa-paper-plane"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- QUICK INFORMATION -->
+                <!-- ================================================= -->
+
+                <div class="quick-info">
+
+
+                    <div class="quick-item">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <span>
+                            Programmer
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-item">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>
+                            Data Science
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-item">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        <span>
+                            Web Developer
+                        </span>
+
+                    </div>
+
+
                 </div>
 
 
             </div>
 
-
-        </div>
+        </section>
 
 
 
         <!-- ================================================= -->
-        <!-- HOME CONTENT -->
+        <!-- ABOUT SECTION -->
         <!-- ================================================= -->
 
-        <div class="hero-content">
+        <section
+            id="about"
+            class="section"
+        >
 
 
-            <p class="small-text">
+            <div class="section-heading">
 
-                HELLO, I'M
-
-            </p>
-
-
-            <h1>
-
-                Suraj Kumar Gupta
-
-            </h1>
-
-
-            <h2>
-
-                I'm a
-                <span id="typing"></span>
-
-            </h2>
-
-
-            <p class="hero-description">
-
-                B.Tech Computer Science Engineering student
-                specializing in Data Science, passionate
-                about programming, web development,
-                data science and emerging technologies.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-
-                <a
-                    href="#projects"
-                    class="btn"
-                >
-
-                    View Projects
-
-                </a>
-
-
-                <a
-                    href="#contact"
-                    class="btn secondary"
-                >
-
-                    Contact Me
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- ABOUT -->
-    <!-- ================================================= -->
-
-    <section
-        id="about"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>01</span>
-
-            <h2>
-                About Me
-            </h2>
-
-        </div>
-
-
-        <div class="about-container">
-
-
-            <div class="about-card">
-
-
-                <h3>
-
-                    Computer Science &
-                    Data Science Student
-
-                </h3>
-
-
-                <p>
-
-                    I am a B.Tech Computer Science
-                    Engineering student specializing
-                    in Data Science. I am interested
-                    in software development, web
-                    development, data science,
-                    machine learning and problem
-                    solving.
-
-                </p>
-
-
-                <p>
-
-                    I enjoy learning new technologies
-                    and building practical projects
-                    that solve real-world problems.
-                    My goal is to continuously improve
-                    my programming skills and create
-                    useful software solutions.
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- SKILLS -->
-    <!-- ================================================= -->
-
-    <section
-        id="skills"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>02</span>
-
-            <h2>
-                My Skills
-            </h2>
-
-        </div>
-
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    💻
-                </div>
-
-                <h3>
-                    C / C++
-                </h3>
-
-                <p>
-                    Programming & DSA
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    🐍
-                </div>
-
-                <h3>
-                    Python
-                </h3>
-
-                <p>
-                    Data Science & Programming
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Web Development
-                </h3>
-
-                <p>
-                    HTML, CSS & JavaScript
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    📊
-                </div>
-
-                <h3>
-                    Data Science
-                </h3>
-
-                <p>
-                    Data Analysis & Visualization
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    🤖
-                </div>
-
-                <h3>
-                    Machine Learning
-                </h3>
-
-                <p>
-                    ML Fundamentals
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    🧠
-                </div>
-
-                <h3>
-                    Problem Solving
-                </h3>
-
-                <p>
-                    Logical & Analytical Thinking
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- PROJECTS -->
-    <!-- ================================================= -->
-
-    <section
-        id="projects"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>03</span>
-
-            <h2>
-                My Projects
-            </h2>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <div class="project-card">
-
-                <div class="project-number">
+                <div class="section-number">
                     01
                 </div>
 
-                <h3>
-                    Portfolio Website
-                </h3>
+                <div>
 
-                <p>
+                    <p class="section-small-title">
+                        WHO I AM
+                    </p>
 
-                    A modern responsive portfolio
-                    website built using HTML, CSS
-                    and JavaScript with interactive
-                    animations.
-
-                </p>
-
-                <div class="project-tech">
-
-                    HTML • CSS • JavaScript
+                    <h2>
+                        About Me
+                    </h2>
 
                 </div>
 
             </div>
 
 
-            <div class="project-card">
 
-                <div class="project-number">
+            <div class="about-layout">
+
+
+                <!-- ABOUT TEXT -->
+
+                <div class="about-card glass-card">
+
+
+                    <div class="card-top">
+
+                        <span class="card-dot"></span>
+
+                        <span>
+                            ABOUT ME
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Computer Science &
+                        Data Science Student
+                    </h3>
+
+
+                    <p>
+
+                        I am a Computer Science Engineering
+                        student specializing in Data Science.
+                        I enjoy solving programming problems
+                        and learning new technologies.
+
+                    </p>
+
+
+                    <p>
+
+                        My interests include software
+                        development, web development,
+                        data analysis, machine learning,
+                        database management and
+                        problem solving.
+
+                    </p>
+
+
+                    <p>
+
+                        I continuously work on improving
+                        my technical skills by building
+                        projects and practicing programming.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- ABOUT STATS -->
+
+                <div class="about-stats">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                        </div>
+
+                        <h3>
+                            B.Tech
+                        </h3>
+
+                        <p>
+                            Computer Science Engineering
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </div>
+
+                        <h3>
+                            Data Science
+                        </h3>
+
+                        <p>
+                            Specialization
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <h3>
+                            Programming
+                        </h3>
+
+                        <p>
+                            C, C++, Java & Python
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            HTML, CSS & JavaScript
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- SKILLS SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="skills"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
                     02
                 </div>
 
-                <h3>
-                    Data Science Project
-                </h3>
+                <div>
 
-                <p>
+                    <p class="section-small-title">
+                        WHAT I KNOW
+                    </p>
 
-                    A data analysis project focused
-                    on processing, analyzing and
-                    visualizing datasets.
-
-                </p>
-
-                <div class="project-tech">
-
-                    Python • Pandas • Matplotlib
+                    <h2>
+                        Technical Skills
+                    </h2>
 
                 </div>
 
             </div>
 
 
-            <div class="project-card">
 
-                <div class="project-number">
+            <div class="skills-grid">
+
+
+                <!-- C / C++ -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        C
+                    </div>
+
+                    <h3>
+                        C / C++
+                    </h3>
+
+                    <p>
+                        Programming,
+                        DSA and Algorithms
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PYTHON -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon python-icon">
+                        Py
+                    </div>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Programming,
+                        Data Analysis & ML
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JAVA -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon java-icon">
+                        J
+                    </div>
+
+                    <h3>
+                        Java
+                    </h3>
+
+                    <p>
+                        Object Oriented
+                        Programming
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JAVASCRIPT -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        JS
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Interactive
+                        Web Development
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HTML CSS -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        WEB
+                    </div>
+
+                    <h3>
+                        HTML & CSS
+                    </h3>
+
+                    <p>
+                        Responsive
+                        Web Design
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DATA SCIENCE -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        DS
+                    </div>
+
+                    <h3>
+                        Data Science
+                    </h3>
+
+                    <p>
+                        Data Analysis &
+                        Visualization
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MACHINE LEARNING -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        ML
+                    </div>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                    <p>
+                        ML Fundamentals
+                        & Models
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DATABASE -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        SQL
+                    </div>
+
+                    <h3>
+                        SQL / MySQL
+                    </h3>
+
+                    <p>
+                        Database &
+                        Query Management
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DSA -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        DSA
+                    </div>
+
+                    <h3>
+                        DSA
+                    </h3>
+
+                    <p>
+                        Data Structures &
+                        Algorithms
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REACT -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        R
+                    </div>
+
+                    <h3>
+                        React
+                    </h3>
+
+                    <p>
+                        Frontend
+                        Development
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NODE -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        N
+                    </div>
+
+                    <h3>
+                        Node.js
+                    </h3>
+
+                    <p>
+                        Backend
+                        Development
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GIT -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        G
+                    </div>
+
+                    <h3>
+                        Git / GitHub
+                    </h3>
+
+                    <p>
+                        Version Control &
+                        Collaboration
+                    </p>
+
+                    <div class="skill-line">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- PROJECTS SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="projects"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
                     03
                 </div>
 
-                <h3>
-                    Web Application
-                </h3>
+                <div>
 
-                <p>
-
-                    An interactive web application
-                    designed to provide a simple
-                    and user-friendly experience.
-
-                </p>
-
-                <div class="project-tech">
-
-                    HTML • CSS • JavaScript
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- ACHIEVEMENTS -->
-    <!-- ================================================= -->
-
-    <section
-        id="achievements"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>04</span>
-
-            <h2>
-                Achievements
-            </h2>
-
-        </div>
-
-
-        <div class="achievement-grid">
-
-
-            <div class="achievement-card">
-
-                <div class="achievement-icon">
-                    🏆
-                </div>
-
-                <h3>
-                    Academic Achievement
-                </h3>
-
-                <p>
-                    Add your academic achievement here.
-                </p>
-
-            </div>
-
-
-            <div class="achievement-card">
-
-                <div class="achievement-icon">
-                    🎓
-                </div>
-
-                <h3>
-                    Certification
-                </h3>
-
-                <p>
-                    Add your certification details here.
-                </p>
-
-            </div>
-
-
-            <div class="achievement-card">
-
-                <div class="achievement-icon">
-                    💡
-                </div>
-
-                <h3>
-                    Project Achievement
-                </h3>
-
-                <p>
-                    Add your project achievement here.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- RESUME -->
-    <!-- ================================================= -->
-
-    <section
-        id="resume"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>05</span>
-
-            <h2>
-                My Resume
-            </h2>
-
-        </div>
-
-
-        <div class="resume-container">
-
-
-            <div class="resume-card">
-
-
-                <div class="resume-icon">
-                    📄
-                </div>
-
-
-                <h3>
-                    View My Resume
-                </h3>
-
-
-                <p>
-
-                    View my complete professional
-                    resume.
-
-                </p>
-
-
-                <a
-                    href="RESUME-2_copy.pdf"
-                    target="_blank"
-                    class="btn"
-                >
-
-                    View Resume
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- GALLERY -->
-    <!-- ================================================= -->
-
-    <section
-        id="gallery"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>06</span>
-
-            <h2>
-                Gallery
-            </h2>
-
-        </div>
-
-
-        <div class="gallery-grid">
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="images/project1.jpg"
-                    alt="Project"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="images/project2.jpg"
-                    alt="Project"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="images/project3.jpg"
-                    alt="Project"
-                >
-
-            </div>
-
-
-            <div class="gallery-item">
-
-                <img
-                    src="images/profile.jpg"
-                    alt="Profile"
-                >
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ================================================= -->
-    <!-- CONTACT -->
-    <!-- ================================================= -->
-
-    <section
-        id="contact"
-        class="section"
-    >
-
-
-        <div class="section-title">
-
-            <span>07</span>
-
-            <h2>
-                Contact Me
-            </h2>
-
-        </div>
-
-
-        <div class="contact-container">
-
-
-            <div class="contact-card">
-
-
-                <h3>
-                    Let's Connect
-                </h3>
-
-
-                <p>
-
-                    Interested in working together
-                    or discussing technology
-                    and projects?
-
-                </p>
-
-
-                <div class="contact-info">
-
-                    <p>
-                        📧 Email:
-                        your-email@example.com
+                    <p class="section-small-title">
+                        WHAT I BUILD
                     </p>
 
-                    <p>
-                        📱 Phone:
-                        +91 XXXXX XXXXX
-                    </p>
+                    <h2>
+                        My Projects
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-globe"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+
 
                     <p>
-                        📍 Location:
-                        India
+
+                        A responsive personal portfolio
+                        website developed using HTML,
+                        CSS and JavaScript with a
+                        modern dark blue interface.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Data Science Project
+                    </h3>
+
+
+                    <p>
+
+                        A data analysis project using
+                        Python and Pandas to analyze,
+                        clean and visualize datasets.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+
+                        <span>Pandas</span>
+
+                        <span>NumPy</span>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+
+                    <div class="project-top">
+
+                        <span class="project-number">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Web Development Project
+                    </h3>
+
+
+                    <p>
+
+                        An interactive and responsive
+                        website designed using modern
+                        HTML, CSS and JavaScript.
+
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- ACHIEVEMENTS SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="achievements"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    04
+                </div>
+
+                <div>
+
+                    <p class="section-small-title">
+                        MY PROGRESS
+                    </p>
+
+                    <h2>
+                        Achievements
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="achievement-grid">
+
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Academic Achievement
+                    </h3>
+
+
+                    <p>
+
+                        Add your academic achievements,
+                        CGPA or academic milestones here.
+
                     </p>
 
                 </div>
 
 
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-certificate"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Certifications
+                    </h3>
+
+
+                    <p>
+
+                        Add your certifications,
+                        courses and technical
+                        credentials here.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Projects
+                    </h3>
+
+
+                    <p>
+
+                        Add your project achievements,
+                        competitions and milestones.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- RESUME SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="resume"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    05
+                </div>
+
+                <div>
+
+                    <p class="section-small-title">
+                        MY DOCUMENT
+                    </p>
+
+                    <h2>
+                        Resume
+                    </h2>
+
+                </div>
+
             </div>
 
 
-        </div>
+
+            <div class="resume-wrapper">
 
 
-    </section>
+                <div class="resume-card">
+
+
+                    <div class="resume-icon">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                    </div>
+
+
+                    <h3>
+                        My Resume
+                    </h3>
+
+
+                    <p>
+
+                        View my complete academic,
+                        technical and professional
+                        information.
+
+                    </p>
+
+
+                    <div class="resume-buttons">
+
+
+                        <a
+                            href="RESUME-2_copy.pdf"
+                            target="_blank"
+                            class="btn primary-btn"
+                        >
+
+                            <span>
+                                View Resume
+                            </span>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a
+                            href="RESUME-2_copy.pdf"
+                            download
+                            class="btn secondary-btn"
+                        >
+
+                            <span>
+                                Download
+                            </span>
+
+                            <i class="fa-solid fa-download"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- GALLERY SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="gallery"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    06
+                </div>
+
+                <div>
+
+                    <p class="section-small-title">
+                        MY WORK
+                    </p>
+
+                    <h2>
+                        Gallery
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/project1.jpg"
+                        alt="Project Image 1"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Project
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/project2.jpg"
+                        alt="Project Image 2"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Project
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/project3.jpg"
+                        alt="Project Image 3"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Project
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="Profile"
+                    >
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- CONTACT SECTION -->
+        <!-- ================================================= -->
+
+        <section
+            id="contact"
+            class="section"
+        >
+
+
+            <div class="section-heading">
+
+                <div class="section-number">
+                    07
+                </div>
+
+                <div>
+
+                    <p class="section-small-title">
+                        GET IN TOUCH
+                    </p>
+
+                    <h2>
+                        Contact Me
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-layout">
+
+
+                <!-- CONTACT MESSAGE -->
+
+                <div class="contact-card">
+
+
+                    <div class="card-top">
+
+                        <span class="card-dot"></span>
+
+                        <span>
+                            CONTACT
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Let's Connect
+                    </h3>
+
+
+                    <p>
+
+                        Feel free to contact me for
+                        collaboration, projects,
+                        internships or technology
+                        related discussions.
+
+                    </p>
+
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:mr.surajgupta03@gmail.com"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong>
+                                mr.surajgupta03@gmail.com
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- PHONE -->
+
+                    <a
+                        href="tel:+916201095235"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong>
+                                +91 6201095235
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- LINKEDIN -->
+
+                    <a
+                        href="https://www.linkedin.com/in/surajkumargupta03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LinkedIn
+                            </span>
+
+                            <strong>
+                                Suraj Kumar Gupta
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- GITHUB -->
+
+                    <a
+                        href="https://github.com/surajgupta-03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <div class="contact-icon">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                GitHub
+                            </span>
+
+                            <strong>
+                                surajgupta-03
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
 
 
 
@@ -869,20 +1795,101 @@
     <!-- FOOTER -->
     <!-- ================================================= -->
 
-    <footer>
+    <footer class="footer">
 
-        <p>
 
-            © 2026 Suraj Kumar Gupta.
-            All Rights Reserved.
+        <div class="footer-content">
 
-        </p>
+
+            <div class="footer-logo">
+
+                <span>S</span>uraj
+
+            </div>
+
+
+            <p>
+
+                B.Tech CSE | Data Science Enthusiast
+
+            </p>
+
+
+            <div class="footer-social">
+
+
+                <a
+                    href="https://www.linkedin.com/in/surajkumargupta03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a
+                    href="https://github.com/surajgupta-03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a
+                    href="https://leetcode.com/u/suraj715/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>
+                        LC
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="mailto:mr.surajgupta03@gmail.com"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Suraj Kumar Gupta.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
 
     </footer>
 
 
 
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
     <script src="script.js"></script>
+
 
 </body>
 
